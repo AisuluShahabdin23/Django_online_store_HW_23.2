@@ -1,0 +1,147 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Vegetables",
+      "description": "Local Vegetables"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "name": "Fruits",
+      "description": "Local Fruits"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "name": "Products for babies",
+      "description": "Products for children age up to 3 y.o "
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 4,
+    "fields": {
+      "name": "Meat",
+      "description": "Beef, chicken, fish, turkey"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 5,
+    "fields": {
+      "name": "Bakery",
+      "description": "buns, pies, donuts and so on"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "Брокколи свежая",
+      "description": "Овощное растение из семейства капустных",
+      "photo": "products/Brokkoli.jpg",
+      "category": 1,
+      "price": 1200.0,
+      "creation_date": "2023-11-05T00:00:00Z",
+      "changing_date": "2023-11-05T00:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "name": "Яблоко",
+      "description": "Плод яблони шарообразной формы",
+      "photo": "products/Yabloko.jpg",
+      "category": 2,
+      "price": 700.0,
+      "creation_date": "2023-11-05T00:00:00Z",
+      "changing_date": "2023-11-05T00:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "Печенье Бонди",
+      "description": "Полезное и мягкое печенье для самых маленьких. Для детей с 6 месяцев.",
+      "photo": "products/Bondi.png",
+      "category": 3,
+      "price": 550.0,
+      "creation_date": "2023-11-05T00:00:00Z",
+      "changing_date": "2023-11-05T00:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "Говядина",
+      "description": "Употребляемое в пищу мясо крупного рогатого скота",
+      "photo": "products/Myaso.jpeg",
+      "category": 4,
+      "price": 3000.0,
+      "creation_date": "2023-11-05T00:00:00Z",
+      "changing_date": "2023-11-05T00:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "name": "Синнабон",
+      "description": "Сдобная булочка, завернутая в рулет с начинкой из корицы и тростникового сахара и облитая сырной помадкой. Чтобы булочка стала мягче, разогрейте её 20 секунд в микроволновке, благодаря этому булочка, ароматы корицы раскроются еще ярче, а булочка станет еще чудеснее!",
+      "photo": "products/Bakery.jpg",
+      "category": 5,
+      "price": 1.0,
+      "creation_date": "2023-11-12T00:00:00Z",
+      "changing_date": null
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "number_version": 2,
+      "title_version": "┴Ёюъъюыш ётхцр ",
+      "is_active": false
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 2,
+    "fields": {
+      "product": 2,
+      "number_version": 2,
+      "title_version": "Яблоко Апорт",
+      "is_active": false
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 3,
+    "fields": {
+      "product": 3,
+      "number_version": 2,
+      "title_version": "Печенье Бонди с железом",
+      "is_active": false
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 4,
+    "fields": {
+      "product": 3,
+      "number_version": 3,
+      "title_version": "Печенье Бонди с кальцием",
+      "is_active": false
+    }
+  }
+]

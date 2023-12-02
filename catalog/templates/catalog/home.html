@@ -1,0 +1,40 @@
+{% extends 'catalog/base.html' %}
+{% load mediapath_tag %}
+{% block content %}
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Magnum</h1>
+        <p class="lead">Magnum - это крупнейшая торгово-розничная сеть Казахстана.
+            Основной деятельностью является реализация товаров широкого потребления.</p>
+        <div class="col-5 mb-5">
+            {% if perms.users.add_product %}
+                <a class="btn btn-outline-primary" href=" {% url 'catalog:create' %} ">Добавить продукт</a>
+            {% endif %}
+        </div>
+    </div>
+        <div class="container mt-5">
+            <div class="row text-center">
+                {% for object in object_list %}
+                    <div class="col-3 mt-2">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                {{ object.name }}
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-text">{{ object.description|truncatechars:100 }}</h3>
+                                <a class="btn btn-sm mb-2 btn-light btn-outline-success" href="{% url 'catalog:product' object.pk%}">Подробнее</a>
+                                {% if user.is_authenticated %}
+                                    {% if perms.users.change and user == object.user %}
+                                        <a class="btn btn-sm mb-2 btn-light btn-outline-primary" href="{% url 'catalog:update' object.pk %}">Редактировать</a>
+                                    {% endif %}
+                                    {% if perms.users.delete %}
+                                        <a class="btn btn-sm btn-outline-danger" href="{% url 'catalog:delete' object.pk %}">Удалить</a>
+                                    {% endif %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+{% endblock %}
